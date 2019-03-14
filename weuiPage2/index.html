@@ -68,7 +68,16 @@
       </div>
     </div>
     <div class="page__bd">
-      <a href="javascript:;" class="weui-btn weui-btn_pay">去支付</a>
+      <a href="javascript:;" class="weui-btn weui-btn_pay" id="goPay">去支付</a>
+    </div>
+  </div>
+  <div class="js_dialog" id="iosDialog2">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+      <div class="weui-dialog__ft">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+      </div>
     </div>
   </div>
   <script>
@@ -82,6 +91,24 @@
         }
         this.classList.add('active')
       })
+    }
+    var aType = document.querySelectorAll('.price-way');
+    var bTpye = document.querySelectorAll('.weui-cell_access')
+    console.log(aType)
+    for (let i = 0; i < bTpye.length; i++) {
+      console.log(i)
+      bTpye[i].addEventListener('click', function () {
+        for (let j of aType) {
+          j.classList.remove('is_choose')
+        }
+        aType[i].classList.add('is_choose')
+      })
+    }
+    var oPay = document.getElementById('goPay')
+    var dialog = document.getElementById('iosDialog2')
+    oPay.onclick = function () {
+      dialog.style.display = 'block';
+      dialog.style.opacity = 1;
     }
   </script>
 </body>
