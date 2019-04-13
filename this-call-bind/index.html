@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //父类
+    function Animal(age){
+      console.log(arguments,'+++')
+      this.species = '动物';
+      this.age = age;
+    }
+    //以前能用 Cat 原型指向Animal的实例能实现继承
+    // 今天换一个写法
+    function Cat(age,name,color){
+      // console.log(arguments,'---');
+      Animal.call(this,age,name,color);
+      // Animal.apply(this,arguments);/*通过apply实现了继承  第一步将我们的构造函数运行一下，  第二部 将父类prototype*/
+      this.name = name;
+      this.coloe = color;
+    }
+    var cat1 = new Cat(3,'加菲猫','yellow');
+    console.log(cat1.age);
+  </script>
+</body>
+</html>
