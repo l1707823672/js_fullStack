@@ -229,9 +229,8 @@ html,body
             white-space nowrap
           .movie-celebrities-roles
             color #999
-
   .movie-booking
-    padding-bottom 0.2rem
+    padding-bottom .2rem
     .weui-flex
       text-align center
       .placeholder
@@ -241,7 +240,6 @@ html,body
         p
           color #bababa
           margin-top 0.1rem
-
   .movie-photo
     .movie-photo__lists
       width 100%
@@ -250,7 +248,7 @@ html,body
       white-space nowrap
       box-sizing border-box
       .stage-img-container
-        margin-right 0.13333rem
+        margin-right .13333rem
         display inline-block
         width 2.4rem
         height 1.867rem
@@ -262,16 +260,10 @@ html,body
             height 100%
         &:first-child
           width 3.3334rem
-          height 1.876rem
+          height 1.867rem
         &:last-child
           margin-right 0
   
-
-
-
-
-
-
   .pos_r
     position relative
     .join-comment
@@ -285,6 +277,7 @@ html,body
       right 0
       transform translateY(-50%)
   .movie-comment
+    overflow hidden
     padding 0.2rem 0 0.4rem 0
     .comment-item
       float left
@@ -293,12 +286,61 @@ html,body
       padding 0.1rem 0.25rem
       margin-top .2rem
       margin-right .3rem
-
-
-
-
-
-
+      .comment-item__sort
+        font-size 0
+        span
+          font-size 14px
+  .chosen-comment
+    &__item
+      .item-avatal
+        float left
+        width 1rem
+        height 1rem
+        border-radius 50%
+        overflow hidden
+        img
+          width 100%
+      .item-detail
+        overflow hidden
+        padding-left 0.3rem
+        padding-bottom 0.4rem
+        border-bottom 1px solid #eeeeee
+        margin-bottom 0.4rem
+        &__hd
+          div
+            span
+              vertical-align middle
+            .level
+              display inline-block
+              width 0.9735rem
+              height 0.4534rem
+              img
+                width 100%
+            .item-score__desc
+              color #9b9b9b
+              font-size 12px
+        .item-detail__content
+          margin 0.15rem 0
+        .item-detail__footer
+          margin-top 0.4rem
+          .item-detail__time
+            color #9b9b9b
+          .pull-right
+            float right 
+            .link
+              color #757575
+              border 1px solid #eeeeee
+              margin-left 0.3rem
+              padding 0.12rem 0.3rem 0.16rem
+              box-sizing border-box
+              border-radius 20px
+              .icon
+                display inline-block
+                width 15px
+                height 15px
+                vertical-align middle
+              span
+                vertical-align middle
 
 #toast
   display none
