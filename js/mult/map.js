@@ -22,7 +22,7 @@ const sosoMap={}
  */
 const renderMap = (map) => {
     // map  检测
-    if(map.show && typeof map.show==='function'){
+    if(map.show && map.show instanceof Function){
         map.show();
     }
     
