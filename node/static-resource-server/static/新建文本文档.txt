@@ -1,0 +1,7 @@
+yarn add babel-cli babel-core babel-preset-env
+yarn add jest
+babel LinkedList.js -o LinkedListComplied.js
+
+
+yarn global add babel-cli babel-core
+npm install -g babel-cli
